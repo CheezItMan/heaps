@@ -1,8 +1,15 @@
 
+def heapsort(array)
+  my_heap = MinHeap.new
 
-# This method uses a heap to sort an array.
-# Time Complexity:  ?
-# Space Complexity: ?
-def heap_sort(list)
-  raise NotImplementedError, "Method not implemented yet..."
+  array.each do |element|
+    my_heap.add(element, element)
+  end
+
+  result = []
+  until my_heap.empty?
+    result << my_heap.remove
+  end
+
+  return result
 end
